@@ -113,4 +113,4 @@ ALTER TABLE "quiz_tag" ADD FOREIGN KEY ("quiz_id") REFERENCES "quiz" ("id");
 ALTER TABLE "quiz_tag" ADD FOREIGN KEY ("tag_id") REFERENCES "tag" ("id");
 ALTER TABLE "problem_tag" ADD FOREIGN KEY ("problem_id") REFERENCES "problem" ("id");
 ALTER TABLE "problem_tag" ADD FOREIGN KEY ("tag_id") REFERENCES "tag" ("id");
-ALTER TABLE "quiz" ADD FOREIGN KEY ("id") REFERENCES "config" ("quiz_id");
+ALTER TABLE "config" ADD FOREIGN KEY ("quiz_id") REFERENCES "quiz" ("id");
