@@ -42,7 +42,7 @@ CREATE TABLE "problem" (
 );
 
 CREATE TABLE "option" (
-  "id" INTEGER PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "problem_id" INTEGER,
   "statement" TEXT
 );
@@ -54,26 +54,26 @@ CREATE TABLE "user_role_quiz" (
 );
 
 CREATE TABLE "role" (
-  "id" INTEGER PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(255)
 );
 
 CREATE TABLE "quiz_attempt" (
-  "id" INTEGER PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "user_id" INTEGER,
   "quiz_id" INTEGER,
   "score" INTEGER DEFAULT NULL
 );
 
 CREATE TABLE "section_attempt" (
-  "id" INTEGER PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "quiz_attempt_id" INTEGER,
   "section_id" INTEGER,
   "time_taken" INTEGER DEFAULT NULL
 );
 
 CREATE TABLE "problem_attempt" (
-  "id" INTEGER PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "section_attempt_id" INTEGER,
   "problem_id" INTEGER,
   "option_id" INTEGER,
@@ -81,7 +81,7 @@ CREATE TABLE "problem_attempt" (
 );
 
 CREATE TABLE "tag" (
-  "id" INTEGER PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(255)
 );
 
